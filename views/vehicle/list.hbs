@@ -1,0 +1,41 @@
+<section class="mt-4">
+    <div class="container">
+        <div class="row mt-4">
+            <a href="/vehicle" class="btn btn-success ml-auto mb-4">Add Vehicle Details</a>
+        </div>
+        <table class="table mt-4" id="productTable">
+            <thead>
+                <tr>
+                    <th scope="col">Refrence Id</th>
+                    <th scope="col">Chasis ID</th>
+                    <th scope="col">Model Id</th>
+                    <th scope="col">Year</th>
+                    <th scope="col">Make</th>
+                    <th scope="col">Model</th>
+                    <th scope="col">Body</th>
+                    <th scope="col">Option</th>
+                    <th scope="col">Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each list}}
+                <tr>
+                    <td>{{this.refrencid}}</td>
+                    <td>{{this.chasisid}}</td>
+                    <td>{{this.modelid}}</td>
+                    <td>{{this.year}}</td>
+                    <td>{{this.make}}</td>
+                    <td>{{this.model}}</td>
+                    <td>{{this.body}}</td>
+                    <td>{{this.option}}</td>
+                    <td>
+                        <a href="/vehicle/{{this._id}}" class="btn btn-primary">Edit</a>
+                        <a href="/vehicle/delete/{{this._id}}" class="btn btn-danger"
+                            onclick="return confirm('Are you wanted to delete  ?')">Delete</a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</section>

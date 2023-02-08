@@ -1,0 +1,40 @@
+<section>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <h2 class="text-center text-success">{{viewTitle}} vehicle Details</h2>
+                <form action="/vehicle" method="post">
+                    <input type="hidden" name="_id" value="{{vehicle._id}}">
+                    <label for="">Refrence Id</label>
+                    <input type="number" name="refrencid" class="form-control" value="{{vehicle.refrencid}}" required>
+
+                    <label for="">Chasisid</label>
+                    <input type="number" name="chasisid" class="form-control" value="{{vehicle.chasisid}}" required>
+
+
+                    <label for="">Model id</label>
+                    <input type="number" name="modelid" class="form-control" value="{{vehicle.modelid}}" required>
+
+
+                    <label for="">Year</label>
+                    <input type="number" name="year" class="form-control" value="{{vehicle.year}}" required>
+
+                    <label for="">Make</label>
+                    <input type="text" name="make" class="form-control" value="{{vehicle.make}}" required>
+
+                    <label for="">Model</label>
+                    <input type="text" name="model" class="form-control" value="{{vehicle.model}}" required>
+
+                    <label for="">Body</label>
+                    <input type="text" name="body" class="form-control" value="{{vehicle.body}}" required>
+
+                    <label for="">Option</label>
+                    <input type="text" name="option" class="form-control" value="{{vehicle.option}}" required>
+
+                    <button type="submit" class="btn btn-success mt-4 "
+                        onclick="alert('Details Added Sucessfully')">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
