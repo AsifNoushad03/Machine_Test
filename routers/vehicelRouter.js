@@ -36,7 +36,7 @@ function insertRecord(req, res) {
 
 
 function updateRecord(req, res) {
-    VehicleModel.findOneAndUpdate({ _id: req.body._id }, req.body, { mew: true }, (err, doc) => {
+    VehicleModel.findOneAndUpdate({ _id: req.body._id }, req.body, { new: true }, (err, doc) => {
         if (!err)
             res.redirect('/vehicle/list')
         else {
